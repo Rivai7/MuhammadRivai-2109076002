@@ -1,0 +1,21 @@
+def bilangan_bulat(angka):
+    if len(angka) <= 1:
+        return angka
+
+    # Pisahkan elemen genap dan ganjil
+    even = []
+    odd = []
+
+    for num in angka:
+        if num % 2 == 0:
+            even.append(num)
+        else:
+            odd.append(num)
+
+    # Gabungkan kembali elemen-elemen tersebut
+    return even + odd
+
+# Contoh penggunaan fungsi
+input_list = [2, 7, 9, 5, 6, 4, 8, 1]
+result = bilangan_bulat(input_list)
+print(result)
