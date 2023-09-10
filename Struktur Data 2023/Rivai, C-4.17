@@ -1,0 +1,17 @@
+def is_palindrome(word):
+    if len(word) <= 1: #Jika panjang kata kurang atau sama dengan 1 = PALINDROM
+        return True 
+    
+    # Perbandingkan karakter pertama dan terakhir
+    if word[0] == word[-1]:
+        return is_palindrome(word[1:-1])
+    else:
+        # Jika kedua karakter tidak sama, kata bukan palindrom
+        return False
+
+
+kata = input('Masukkan Kata = ')
+if is_palindrome(kata):
+    print(f"{kata} adalah Palindrom")
+else:
+    print(f"{kata} bukan Palindrom")
